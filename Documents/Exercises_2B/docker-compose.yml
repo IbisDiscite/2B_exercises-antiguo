@@ -1,0 +1,10 @@
+ms-db:
+  build: ./db-server
+  ports:
+    - "3306:3306"
+2b-exercises:
+  build: .
+  ports:
+    - "8086:8086"
+  links:
+    - ms-db
